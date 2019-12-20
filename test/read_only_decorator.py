@@ -1,5 +1,7 @@
 from read_only_class_attributed import read_only
 
+import unittest
+
 #example for all read only attributes
 @read_only('*')
 class _CONSTANTS:
