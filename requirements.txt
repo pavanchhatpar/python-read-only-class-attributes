@@ -1,1 +1,2 @@
 versioneer==0.18
+-e .
