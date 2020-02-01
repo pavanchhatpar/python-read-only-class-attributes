@@ -39,3 +39,10 @@ class ReadonlyTestCase(unittest.TestCase):
             mypi = CONSTANTS.pi
         except:
             self.fail("Reading read only attributes should not throw exceptions")
+
+    def testCanEditNonReadOnly(self):
+        try:
+            PLANETCONSTANTS.g = 1.625
+            PLANETCONSTANTS.planet = 'Moon'
+        except:
+            self.fail("Non read only attributes should be modifiable")
