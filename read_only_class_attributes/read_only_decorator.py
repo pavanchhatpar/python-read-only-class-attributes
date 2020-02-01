@@ -17,8 +17,9 @@ def read_only(*attrs):
                     raise AttributeError(
                             "All attributes of this class are read-only")
                 if name in attrs:
-                    raise AttributeError(
-                        f"Cannot modify `{name}` as it is marked as read-only")
+                    err = "Cannot modify `{}` as it is marked as read-only"
+                    err = err.format(name)
+                    raise AttributeError(err)
                 return super().__setattr__(name, value)
         return ReadOnlyPropertyClass
     return _rebuilt_class
