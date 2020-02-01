@@ -1,4 +1,4 @@
-from read_only_class_attributed import read_only
+from read_only_class_attributes import read_only
 
 import unittest
 
